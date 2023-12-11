@@ -1,0 +1,30 @@
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    /* Adjust width and margins for smaller screens */
+    body > div {
+        margin: 8px;
+        width: auto;
+    }
+    /* Adjust input width */
+    input[type="text"] {
+        width: 80%;
+    }
+    /* Adjust padding and font sizes for buttons */
+    button {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+#cir {
+    height: 8px;
+    width: 8px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    }
+body {
+    font-style: normal; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
